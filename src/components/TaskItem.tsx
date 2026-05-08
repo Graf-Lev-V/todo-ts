@@ -1,4 +1,12 @@
-export default function TaskItem({ taskText, handleCompleted, id, completed, handleDelete }) {
+type TaskItemProps = {
+    taskText: string;
+    handleCompleted: (value: number) => void;
+    id: number;
+    completed: boolean;
+    handleDelete: (value: number) => void;
+}
+
+export default function TaskItem({ taskText, handleCompleted, id, completed, handleDelete }: TaskItemProps) {
 
     return (
         <>

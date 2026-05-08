@@ -1,4 +1,9 @@
-export default function TaskFilter({ select, setSelect }) {
+type TaskFilterProps = {
+    select: string;
+    setSelect: (value: string) => void;
+}
+
+export default function TaskFilter({ select, setSelect }: TaskFilterProps) {
     return (
         <>
             <select value={select} onChange={(e) => setSelect(e.target.value)}>

@@ -1,6 +1,13 @@
 import TaskItem from './TaskItem';
+import type { Task } from '../types'
 
-export default function TaskList({ taskList, handleCompleted, handleDelete }) {
+type TaskListProps = {
+    taskList: Task[];
+    handleCompleted: (value: number) => void;
+    handleDelete: (value: number) => void;
+}
+
+export default function TaskList({ taskList, handleCompleted, handleDelete }: TaskListProps) {
 
     return (
         <>
